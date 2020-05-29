@@ -150,7 +150,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1007
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -311,20 +311,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\danal\Documents\GitHub\SpatialVisualizationApp\ObjectViewer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 78}
-    m_SelectedIDs: 4c390000
-    m_LastClickedID: 14668
-    m_ExpandedIDs: 000000004c3900004e39000050390000523900005439000000ca9a3b
+    scrollPos: {x: 0, y: 126}
+    m_SelectedIDs: 6e390000
+    m_LastClickedID: 14702
+    m_ExpandedIDs: 000000004c3900004e3900005039000052390000543900005c3900006039000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,8 +379,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000066350000a03c00009c3a00005037000000000000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000066350000a03c00009c3a0000503700000000000070220300
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -477,7 +477,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 70fbffff
+      m_ExpandedIDs: 80f2feff0ef6fefff0f6feff58fafeff7629ffff0436ffffdc38ffff6655ffff2a6fffff3e8dffffcc96ffff0899ffffbae9ffff50ebffff20f3ffff70fbffffd2360000d836000046380000349000005e1e0700a4380700
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -537,9 +537,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.319639, y: 2.848261, z: -4.1247993}
+    m_Target: {x: 5.284824, y: 2.9920506, z: -2.3989286}
     speed: 2
-    m_Value: {x: 4.319639, y: 2.848261, z: -4.1247993}
+    m_Value: {x: 5.284824, y: 2.9920506, z: -2.3989286}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -585,13 +585,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.26274645, y: -0.16599849, z: 0.045942143, w: 0.9493708}
+    m_Target: {x: -0.18420134, y: 0.0871747, z: -0.016422613, w: -0.9788924}
     speed: 2
-    m_Value: {x: 0.2627456, y: -0.16599794, z: 0.04594199, w: 0.94936764}
+    m_Value: {x: -0.18419862, y: 0.08717341, z: -0.01642237, w: -0.9788779}
   m_Size:
-    m_Target: 5.52635
+    m_Target: 8.264727
     speed: 2
-    m_Value: 5.52635
+    m_Value: 7.9088297
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 778
+    y: 759
     width: 1368
-    height: 231
+    height: 250
   m_ViewDataDictionary: {fileID: 0}

@@ -12,11 +12,15 @@ public class rig : MonoBehaviour
 
     private Vector3 rotation = new Vector3(), scaleChange = new Vector3();
 
+	void Start(){
+		defaultScale.Set(1.0f, 1.0f, 1.0f);
+	}
+
     // Using FixedUpdate instead of Update because I am using physics
     void FixedUpdate()
     {
         rotationDelta = 4;
-        defaultScale.Set(0.5f, 0.5f, 0.5f);
+        
 
         // Rotation controls
         if (Input.GetKey("u"))
@@ -38,16 +42,16 @@ public class rig : MonoBehaviour
         }
 
         // Scale controls
-        if (Input.GetKey("y"))
+        if (Input.GetKey("q")  &&  t.localScale.x <= 1.2f)
             scaleChange.Set(0.01f, 0.01f, 0.01f);
-        else if (Input.GetKey("h"))
+        else if (Input.GetKey("a")  &&  t.localScale.x > 0f)
             scaleChange.Set(-0.01f, -0.01f, -0.01f);
         else
             scaleChange.Set(0f, 0f, 0f);
 
         t.localScale += scaleChange;
         rotation.Set(rotX, rotY, rotZ);
-        t.localEulerAngles = rotation;
+        t.eulerAngles = rotation;
 
     }
 }
