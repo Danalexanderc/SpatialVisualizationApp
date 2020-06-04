@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
+	public GameObject[] objects;
+	private int active = 3;
 	
-	public GameObject Cube;
-	public GameObject L;
+	private string[] keys = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 	
     void Update()
     {
-		
-		if(Input.GetKeyUp("1")) // Set Cube to be the active object when "1" is pressed.
-		{
-			Cube.SetActive(true);
-			L.SetActive(false);
-		}
-		else if(Input.GetKeyUp("2")) // Set Cube to be the active object when "1" is pressed.
-		{
-			Cube.SetActive(false);
-			L.SetActive(true);
+		for(int i = 0; i < objects.Length; i++){
+			if(Input.GetKeyUp(keys[i])){
+				objects[active].SetActive(false);
+				active = i;
+				objects[active].SetActive(true);
+			}
 		}
     }
 }

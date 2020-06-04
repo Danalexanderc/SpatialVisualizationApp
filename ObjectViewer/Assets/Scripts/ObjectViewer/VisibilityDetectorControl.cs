@@ -13,7 +13,7 @@ public class VisibilityDetectorControl : MonoBehaviour
 	public MeshCollider col = null;
 	
 	private Vector3 position = new Vector3(), scale = new Vector3();
-	private int enters = 0;
+	public int enters = 0;
 	
     // Update is called once per frame
     void Update()
@@ -38,6 +38,11 @@ public class VisibilityDetectorControl : MonoBehaviour
 		else
 			filling.GetComponent<Renderer>().enabled = false; // Hide the filling.
 
+    }
+	
+	void OnEnable()
+    {
+        enters = 0; // This prevents the enable from growing larger as the object is disabled and enabled.
     }
 
 	void OnTriggerEnter(Collider col)
