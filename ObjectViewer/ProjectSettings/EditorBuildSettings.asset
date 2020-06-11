@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 390c4f67e8e1a0340be698d76ac6a915
   - enabled: 1
-    path: Assets/Scenes/ObjectViewer.unity
+    path: Assets/Scenes/ObjectViewer/OVFreeView.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/CuttingPlane.unity
     guid: aedc598b9b1a15d47852419c8c41bb7b
+  - enabled: 1
+    path: Assets/Scenes/ObjectViewer/OVPractice1.unity
+    guid: b25f78d2bb90318449d588741dd9d8e3
   m_configObjects: {}

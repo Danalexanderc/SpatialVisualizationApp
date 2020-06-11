@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
 	public GameObject[] objects;
-	private int active = 3;
+	public int active = 4;
 	
 	private string[] keys = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
 	

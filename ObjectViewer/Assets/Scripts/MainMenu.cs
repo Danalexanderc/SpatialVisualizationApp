@@ -8,13 +8,12 @@ public class MainMenu : MonoBehaviour
  
 	public void PlayObjectViewer()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-		
+		SceneManager.LoadScene("OVFreeView"); // Load OVExplanation scene.
 	}
 	
 	public void PlayCuttingPlane()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+		SceneManager.LoadScene("CuttingPlane");
 	}
 	
 	public void ExitGame()
