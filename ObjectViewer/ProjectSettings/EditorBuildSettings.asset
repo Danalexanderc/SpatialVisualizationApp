@@ -16,5 +16,11 @@ EditorBuildSettings:
     guid: aedc598b9b1a15d47852419c8c41bb7b
   - enabled: 1
     path: Assets/Scenes/ObjectViewer/OVPractice1.unity
-    guid: b25f78d2bb90318449d588741dd9d8e3
+    guid: c2d97a1247da8eb408edfda675e0ac18
+  - enabled: 1
+    path: Assets/Scenes/ObjectViewer/OVPractice2.unity
+    guid: d228fd6f3b0c03e4d953dd377261cb07
+  - enabled: 1
+    path: Assets/Scenes/ObjectViewer/OVPractice3.unity
+    guid: 31ec1a2159d134445b48d4a639d9fe9e
   m_configObjects: {}
