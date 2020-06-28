@@ -11,7 +11,6 @@ public class OrthoViewManager : MonoBehaviour
 	
 	private int offset = 15, state = 0, delay = 0;
 	private Vector3[] positions = new Vector3[3]; 
-	private bool needUpdate = true;
 	
     void Start()
     {
@@ -21,7 +20,7 @@ public class OrthoViewManager : MonoBehaviour
     }
 
     void FixedUpdate()
-    {	
+    {
 		if(delay >= 7){
 			updateViews();
 			delay = 0;
@@ -34,10 +33,7 @@ public class OrthoViewManager : MonoBehaviour
 		Graphics.CopyTexture(cameraTexture, views[state]);
 		
 		state++;
-		if(state >= 3){
-			state = 0;
-			needUpdate = false;
-		}
+		if(state >= 3) state = 0;
 		
 		cameraHolder.localPosition = positions[state];
 		cameraHolder.LookAt(objectManager);

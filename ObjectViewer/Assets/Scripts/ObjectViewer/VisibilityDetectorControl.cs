@@ -31,12 +31,12 @@ public class VisibilityDetectorControl : MonoBehaviour
 			
 		detector.transform.localScale = scale;
 		
-		detector.transform.LookAt(user.transform);
+		detector.transform.LookAt(user.transform); // Make sure the detector is pointing at the user.
 
 		if(enters == 0)
-			filling.GetComponent<Renderer>().enabled = true; // Show the filling.
+			filling.GetComponent<Renderer>().enabled = true; // Show the filling if there is nothing obstucting it and the position of "user".
 		else
-			filling.GetComponent<Renderer>().enabled = false; // Hide the filling.
+			filling.GetComponent<Renderer>().enabled = false; // Hide the filling otherwise.
 
     }
 	

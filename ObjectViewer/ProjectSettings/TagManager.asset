@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Object
+  - OrientationCube
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - Security1
   - Detectors
   - Match
-  - 
-  - 
-  - 
+  - Dotted Lines
+  - Fillings
+  - Blank Faces
   - 
   - 
   - 
