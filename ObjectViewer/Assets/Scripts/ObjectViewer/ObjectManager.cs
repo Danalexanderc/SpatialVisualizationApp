@@ -19,7 +19,7 @@ public class ObjectManager : MonoBehaviour
 	
     void Update(){
 		for(int i = 0; i < keys.Length; i++){ // Checks if the user has released any of the number keys and sets the active object based on that.
-			if(Input.GetKeyUp(keys[i])){
+			if(Input.GetKeyUp(keys[i]) && i < objects.Length){
 				int temp = i;
 				
 				if(Input.GetKey(KeyCode.Space) && i + 9 < objects.Length) // Holding the spacebar allows the user to select other objects with the number keys.
