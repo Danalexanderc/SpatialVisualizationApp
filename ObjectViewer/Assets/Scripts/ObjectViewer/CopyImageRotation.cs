@@ -13,7 +13,8 @@ public class CopyImageRotation : MonoBehaviour
 	public float range = 0.1f;
 	
 	public Quaternion[] rotationToMatch;
-	public int[] correctActiveObject;
+	public int[] correctActiveObject, // Set from the inspector. Indicates which object should be active for each challenge.
+				correctMatchingActiveObject; // Set from the inspector. Indicates which object the match view should be set to.
 	
 	private int numberOfChallenges = 9;
 	private int progress = 0;
@@ -28,6 +29,9 @@ public class CopyImageRotation : MonoBehaviour
 		for(int i = 0; i < progressBar.Length; i++) // Make sure the correct number of progress dots are displayed.
 			progressBar[i].SetActive(i < numberOfChallenges - 1);
 			
+		
+		objectManager.GetComponent<ObjectManager>().SetActive(correctActiveObject[0]); // Set the next correct object to be active.
+		matchObject.GetComponent<ObjectManager>().SetActive(correctMatchingActiveObject[0]);	
 	}
 
     void Update()
@@ -48,7 +52,7 @@ public class CopyImageRotation : MonoBehaviour
 					progressBar[progress++].GetComponent<Image>().sprite = progressCircleFinished; // Set the next progress dot to the finished sprite.
 					
 					objectManager.GetComponent<ObjectManager>().SetActive(correctActiveObject[progress]); // Set the next correct object to be active.
-					matchObject.GetComponent<ObjectManager>().SetActive(correctActiveObject[progress]);
+					matchObject.GetComponent<ObjectManager>().SetActive(correctMatchingActiveObject[progress]);
 					
 					if(progress >= numberOfChallenges - 1){ // If the user has finished all the challenges, display the ending message.
 						completedText.SetActive(true);

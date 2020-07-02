@@ -6,7 +6,7 @@ public class ObjectViewerRig : MonoBehaviour
 {
     public Transform t;
     public float rotationDelta = 3, movementDelta = 0.1f;
-	public Vector3 defaultPosition = new Vector3(0, 0, 1);
+	public Vector3 defaultPosition = new Vector3(0, 0, 0);
 	
 	public bool translation = false;
 
