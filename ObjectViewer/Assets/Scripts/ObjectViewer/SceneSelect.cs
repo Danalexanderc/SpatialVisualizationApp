@@ -5,15 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class SceneSelect : MonoBehaviour
 {
-	public void PlayPractice1(){
-		SceneManager.LoadScene("OVPractice1");
+	public void PlayCopyRotationAnimation(){
+		SceneManager.LoadScene("CopyRotationAnimation");
 	}
 	
-	public void PlayPractice2(){
-		SceneManager.LoadScene("OVPractice2");
+	public void PlayCopyRotationAsTo(){
+		SceneManager.LoadScene("CopyRotationAsTo");
 	}
 
-	public void PlayPractice3(){
-		SceneManager.LoadScene("OVPractice3");
+	public void PlayCopyRotationImage(){
+		SceneManager.LoadScene("CopyRotationImage");
+	}
+	
+	public void PlayCopyRotationImageHard(){
+		SceneManager.LoadScene("CopyRotationImageHard");
+	}
+	
+	public void PlayMultipleChoice2Dto3D(){
+		SceneManager.LoadScene("MultipleChoice2Dto3D");
+	}
+	
+	public void PlayMultipleChoice3Dto2D(){
+		SceneManager.LoadScene("MultipleChoice3Dto2D");
 	}
 }

@@ -84,7 +84,7 @@ public class ObjectViewerRig : MonoBehaviour
 			reset();
 	}
 	
-	private void reset()
+	public void reset()
 	{
 		t.eulerAngles = new Vector3(0, 0, 0);
 		position.Set(defaultPosition.x, defaultPosition.y, defaultPosition.z);

@@ -120,35 +120,6 @@ public class MultipleChoice3Dto2D : MonoBehaviour
 						tryAnother.SetActive(true);
 					
 				}
-		
-		/*
-		if(Input.GetKeyUp(KeyCode.Return))
-			if(CompareQuaternions(controlledObject.rotation, rotationToMatch[progress], range)){ // If the object is approximately aligned to the target rotation for this challenge.
-		
-				controlledObject.eulerAngles = new Vector3(0, 0, 0);
-		
-				if(progress < numberOfChallenges)
-				{
-					progressBar[progress++].GetComponent<Image>().sprite = progressCircleFinished; // Set the next progress dot to the finished sprite.
-					
-					objectManager.GetComponent<ObjectManager>().SetActive(correctActiveObject[progress]); // Set the next correct object to be active.
-					matchObject.GetComponent<ObjectManager>().SetActive(correctMatchingActiveObject[progress]);
-					
-					if(progress >= numberOfChallenges){ // If the user has finished all the challenges, display the ending message.
-						completedText.SetActive(true);
-						imageToMatchObject.SetActive(false);
-					}
-					else{
-						matchObject.GetComponent<Transform>().rotation = rotationToMatch[progress]; // If the user has not finished the challenge, rotate the match object to the desired position.
-					}
-				}
-			}
-			else
-				tryAnother.SetActive(true); // Set the "try another rotation!" text to visible if the user enters an incorrect rotation.
-		
-
-		}
-		*/
 	}
 }
 
