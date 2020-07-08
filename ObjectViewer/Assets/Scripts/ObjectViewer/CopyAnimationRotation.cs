@@ -24,6 +24,9 @@ public class CopyAnimationRotation : MonoBehaviour
 		controlledObject = objectManager.GetComponent<Transform>();
 		numberOfChallenges = rotationToMatch.Length + 1; // The number of challenges is given by the number of rotations entered into the array.
 		
+		objectManager.GetComponent<ObjectManager>().SetActive(correctActiveObject[progress]); // Set the next correct object to be active.
+		matchObject.GetComponent<ObjectManager>().SetActive(correctMatchingActiveObject[progress]);
+		
 		matchObjectTransform = matchObject.GetComponent<Transform>();
 		
 		matchObjectTransform.eulerAngles = new Vector3(0, 0, 0);
@@ -40,6 +43,7 @@ public class CopyAnimationRotation : MonoBehaviour
 		
 		float speed = 1f;
 		
+		// Animation controls.
 		if(animationState == 0){ // delay before rotation.
 			if(delayCounter >= initialDelay)
 				animationState = 1;

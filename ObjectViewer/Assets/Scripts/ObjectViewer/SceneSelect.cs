@@ -28,4 +28,8 @@ public class SceneSelect : MonoBehaviour
 	public void PlayMultipleChoice3Dto2D(){
 		SceneManager.LoadScene("MultipleChoice3Dto2D");
 	}
+	
+	public void PlayCopyRotationAnimationEasy(){
+		SceneManager.LoadScene("CopyRotationAnimationEasy");
+	}
 }

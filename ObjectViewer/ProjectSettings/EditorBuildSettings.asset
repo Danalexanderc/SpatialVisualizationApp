@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ObjectViewer/MultipleChoice3Dto2D.unity
     guid: ad28ccdc4497fb0408ce591e0a5ede8e
+  - enabled: 1
+    path: Assets/Scenes/ObjectViewer/CopyRotationAnimationEasy.unity
+    guid: fb4773d8d5436af46b0a9e8b07b11b76
   m_configObjects: {}
