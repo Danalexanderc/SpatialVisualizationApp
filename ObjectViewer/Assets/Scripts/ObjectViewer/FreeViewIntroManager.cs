@@ -5,7 +5,7 @@ using TMPro;
 
 public class FreeViewIntroManager : MonoBehaviour
 {
-    public GameObject introManager, canvas, hiddenLineDrawing, objects, objectManager, axes, xAxis, yAxis, zAxis;
+    public GameObject introManager, canvas, hiddenLineDrawing, objects, objectManager, axes, xAxis, yAxis, zAxis, pressAnyKeyText;
 	
 	public GameObject[] text;
 	
@@ -22,8 +22,36 @@ public class FreeViewIntroManager : MonoBehaviour
 		
 		t = objects.GetComponent<Transform>();
     }
+	
+	
+	private int skipTimer = -1;
+	private bool pressed = false;
+	
+	void Update() {
+		
+		if(!Input.anyKey && pressed){	
+			if(!pressAnyKeyText.activeInHierarchy) {
+				pressAnyKeyText.SetActive(true);
+				skipTimer = 0;
+			}
+			else {
+				canvas.SetActive(true);
+				objects.SetActive(true);
+				objectManager.GetComponent<ObjectViewerRig>().reset();
+				axes.SetActive(true);
+				hiddenLineDrawing.SetActive(true);
+				introManager.SetActive(false);
+			}
+		}
+		if(skipTimer >= 0) 
+			if(skipTimer++ > 500)
+				pressAnyKeyText.SetActive(false);
+		
+		pressed = Input.anyKey;
+	}
+	
 
-    void FixedUpdate()
+    void FixedUpdate() // Manages the animation playing and deactivates the intro manager when done.
     {
 		time++;
 		
@@ -118,7 +146,9 @@ public class FreeViewIntroManager : MonoBehaviour
 		blink();
     }
 	
+	
 	private GameObject fadeInText = null, fadeOutText = null; 
+	
 	private void FadeText(){
 		if(fadeInText != null) {
 			if(fadeInText.activeInHierarchy){
@@ -144,7 +174,9 @@ public class FreeViewIntroManager : MonoBehaviour
 		}
 	}
 	
+	
 	private GameObject blinkObject = null;
+	
 	private int blinkTimer = 0;
 	private void blink(){
 		if(blinkObject != null){
